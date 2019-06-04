@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 @Component
-@Primary
+//@Primary
 public class DBCustomerLogger implements CustomerLogger {
 
     private static final String CREATE_QUERY = "INSERT INTO database_m5.custom_log (custom_id , first_name , last_name) VALUES (?, ?, ?);";

@@ -1,6 +1,7 @@
 package pl.coderslab.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import pl.coderslab.pojo.Customer;
 
@@ -13,7 +14,7 @@ public class MemoryCustomerRepository implements CustomerRepository {
     private CustomerLogger customerLogger;
 
     @Autowired
-    public MemoryCustomerRepository(CustomerLogger customerLogger) {
+    public MemoryCustomerRepository(@Qualifier("simpleCustomerLogger") CustomerLogger customerLogger) {
         this.customerLogger = customerLogger;
             }
 
